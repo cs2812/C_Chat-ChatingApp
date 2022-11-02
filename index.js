@@ -33,6 +33,6 @@ io.on("connection",(socket)=>{
     socket.emit("history",history)
 })
 //Socket.io Setup End---->
-server.listen(port,()=>{
+server.listen(process.env.PORT ||port,()=>{
     console.log("server start at "+ port)
 })
